@@ -1,16 +1,14 @@
 import * as cookie from 'react-cookie';
 
-const URI = process.env.API_ENDPOINT;
-
-export function formatUri(uri) {
-	return URI + ((uri && uri[0] === '/') ? uri : '/' + uri);
+export function formatUri(base, uri) {
+	return base + ((uri && uri[0] === '/') ? uri : '/' + uri);
 }
 
 export function withAuthorization(headers) {
-	if (reactCookie.load('auth_token')) {
+	if (cookie.load('auth_token')) {
         return {
             ...headers,
-            'Authorization': `Bearer ${reactCookie.load('auth_token')}`
+            'Authorization': `Bearer ${cookie.load('auth_token')}`
         };
 	}
     		
