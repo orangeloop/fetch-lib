@@ -8,7 +8,7 @@ export const withAuthorization = (headers) => {
 	if (cookie.load('auth_token')) {
         return {
             ...headers,
-            'Authorization': `Bearer ${reactCookie.load('auth_token')}`
+            'Authorization': `Bearer ${cookie.load('auth_token')}`
         };
 	}
     		

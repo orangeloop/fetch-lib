@@ -226,7 +226,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var withAuthorization = exports.withAuthorization = function withAuthorization(headers) {
 	    if (cookie.load('auth_token')) {
 	        return _extends({}, headers, {
-	            'Authorization': 'Bearer ' + reactCookie.load('auth_token')
+	            'Authorization': 'Bearer ' + cookie.load('auth_token')
 	        });
 	    }
 	
