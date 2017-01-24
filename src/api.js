@@ -5,7 +5,7 @@ export const formatUri = (base, uri) => {
 };
 
 export const withAuthorization = (headers) => {
-	if (reactCookie.load('auth_token')) {
+	if (cookie.load('auth_token')) {
         return {
             ...headers,
             'Authorization': `Bearer ${reactCookie.load('auth_token')}`
