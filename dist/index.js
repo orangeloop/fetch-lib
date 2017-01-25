@@ -928,7 +928,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var normalizeArray = exports.normalizeArray = function normalizeArray(schema, propertyName) {
 	    return function (json) {
-	        return buildPromise(getJson(json, propertyName), (0, _normalizr.arrayOf)(schema));
+	        return buildPromise(getJson(json, propertyName), new schema.Array(schema));
 	    };
 	};
 	

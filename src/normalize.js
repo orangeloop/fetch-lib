@@ -1,6 +1,6 @@
 import {
     normalize,
-    arrayOf
+    schema
 }               from 'normalizr';
 
 const getJson = (json, propertyName) => {
@@ -19,7 +19,7 @@ export const normalizeObject = (schema, propertyName) => {
 
 export const normalizeArray = (schema, propertyName) => {
     return (json) => {
-        return buildPromise(getJson(json, propertyName), arrayOf(schema));
+        return buildPromise(getJson(json, propertyName), new schema.Array(schema));
     };
 }
 
