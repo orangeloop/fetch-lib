@@ -5,10 +5,7 @@ export {
   deleteJSON
 } from './fetch';
 
-export {
-  normalizeArray,
-  normalizeObject
-} from './normalize';
+export { normalize } from './normalize';
 
 export { default as parseJson } from './parseJson';
 export { default as validateResponse } from './validateResponse';

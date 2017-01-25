@@ -89,16 +89,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _normalize = __webpack_require__(9);
 	
-	Object.defineProperty(exports, 'normalizeArray', {
+	Object.defineProperty(exports, 'normalize', {
 	  enumerable: true,
 	  get: function get() {
-	    return _normalize.normalizeArray;
-	  }
-	});
-	Object.defineProperty(exports, 'normalizeObject', {
-	  enumerable: true,
-	  get: function get() {
-	    return _normalize.normalizeObject;
+	    return _normalize.normalize;
 	  }
 	});
 	
