@@ -908,7 +908,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.normalizeArray = exports.normalizeObject = undefined;
+	exports.normalize = undefined;
 	
 	var _normalizr = __webpack_require__(10);
 	
@@ -920,19 +920,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return Promise.resolve((0, _normalizr.normalize)(json, schema));
 	};
 	
-	var normalizeObject = exports.normalizeObject = function normalizeObject(schema, propertyName) {
+	var normalize = exports.normalize = function normalize(schema, propertyName) {
 	    return function (json) {
 	        return buildPromise(getJson(json, propertyName), schema);
 	    };
 	};
-	
-	var normalizeArray = exports.normalizeArray = function normalizeArray(schema, propertyName) {
-	    return function (json) {
-	        return buildPromise(getJson(json, propertyName), new schema.Array(schema));
-	    };
-	};
-	
-	exports.default = normalizeObject;
 
 /***/ },
 /* 10 */
